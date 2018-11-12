@@ -1,15 +1,15 @@
 ---
 title: Le Wagon - Middleman
 ---
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('../images/kyoto.jpg');">
   <div class="banner-content">
     <h1>Le Wagon Kyoto</h1>
     <p>Learn to code with us in Kyoto</p>
     <p>
-      <%= link_to "Start Now", "about.html" %>
+      <%= link_to "Start Now", "about.html",class:"btn btn-primary" %>
     </p>
     <p>
-      <%= link_to "Teammate", "team.html" %>
+      <%= link_to "Teammate", "team.html",class:"btn btn-primary" %>
     </p>
   </div>
 </div>
@@ -24,12 +24,25 @@ title: Le Wagon - Middleman
     </p>
   </div>
 </div> -->
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category">Popular</div>
-  <div class="card-description">
-    <h2>Le Wagon Shanghai</h2>
-    <p>Very cool city, the best</p>
+<div class="container" id="home-flats">
+  <h2 class="text-center">Recent flats</h2>
+  <div class="row">
+    <% data.flats.each do |owner, flat| %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('../images/<%= flat.city_slug %>.png');">
+        <div class=" card-category">
+          <%= flat.city_name %>
+        </div>
+        <div class="card-description">
+          <h3><%= flat.name %></h3>
+          <p>
+            <%= flat.description %>
+          </p>
+        </div>
+        <%= image_tag "#{owner}.png", class:"card-user" %>
+        <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
+      </div>
+    </div>
+    <% end %>
   </div>
-  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-  <a class="card-link" href="#" ></a>
 </div>

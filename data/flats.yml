@@ -1,0 +1,42 @@
+sumita:
+  name: "Sumita's home"
+  description: "Charming room in Sakhalin"
+  city_name: "Sakhalin, Russia"
+  city_slug: "sa"
+  wifi: false
+  rating: 5
+willem:
+  name: "Willem's home"
+  description: "Castle"
+  city_name: "Brussels, Belgium"
+  city_slug: "bu"
+  wifi: false
+  rating: 5
+min:
+  name: "Min's home"
+  description: Nice flat in Seul
+  city_name: "Seul, South Korea"
+  city_slug: "se"
+  wifi: true
+  rating: 5
+luis:
+  name: "Luis's home"
+  description: "Luxury Land in Hong-Kong"
+  city_name: "KowLoong, Hong-Kong"
+  city_slug: "hk"
+  wifi: false
+  rating: 5
+francis:
+  name: "Francis's home"
+  description: "Hollywood-star's House"
+  city_name: "LA, U.S."
+  city_slug: "la"
+  wifi: false
+  rating: 5
+josh:
+  name: "Josh's home"
+  description: The highest price in the world
+  city_name: "NY, U.S."
+  city_slug: "ny"
+  wifi: true
+  rating: 5
